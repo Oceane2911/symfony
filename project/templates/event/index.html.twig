@@ -6,14 +6,15 @@
 {% block stylesheet %}
 	{{ parent() }}
 	<link rel="stylesheet" href="{{asset('style/event/index.css')}}">
+	<link rel="stylesheet" href="{{asset('style/event/show.css')}}">
 {% endblock %}
 
 {% block body %}
 	<div class="level_container">
-			<a class="level" href="{{path('event.show' , {level:'B1'})}}">B1</a>
-			<a class="level" href="{{path('event.show' , {level:'B2'})}}">B2</a>
-			<a class="level" href="{{path('event.show' , {level:'B3'})}}">B3</a>
-		</div>
+		<a class="level" href="{{path('event.show' , {level:'B1'})}}">B1</a>
+		<a class="level" href="{{path('event.show' , {level:'B2'})}}">B2</a>
+		<a class="level" href="{{path('event.show' , {level:'B3'})}}">B3</a>
+	</div>
 	<div class="cours">
 		<h2>Cours du
 			{{today|date("d/m/Y")}}</h2>
@@ -79,5 +80,14 @@
 
 			{% endfor %}
 		</table>
+	</div>
+	<div >
+		<h2>Actus La Manu</h2>
+		{% for fact in facts %}
+			<div class="card_event">
+				<h4>{{fact.title}}</h4>
+				<p>{{fact.description}}</p>
+			</div>
+		{% endfor %}
 	</div>
 {% endblock %}

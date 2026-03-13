@@ -3,7 +3,7 @@
 }
 .card_event {
     width: 30%;
-    height: 10rem;
+    height: auto;
     background: var(--dark-color);
     border: solid 2px var(--black);
     border-radius: 1rem;
