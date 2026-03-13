@@ -35,6 +35,7 @@ final class EventController extends AbstractController
         $events = $repository->findBy(['level' => $level]);
         return $this->render('event/show.html.twig', [
             'level' => $level,
+            
             'events' => $events,
         ]);
     }

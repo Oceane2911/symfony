@@ -5,11 +5,11 @@ form {
     justify-content: center;
     align-items: center;
 }
-#event {
+#event, #funfact {
     width: 50%;
     height: auto;
 }
-#event div {
+#event div, #funfact div {
     margin: 1rem;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@ input {
     border-radius: 1rem;
     border: 2px solid var(--dark-color);
 }
-#event div:last-of-type {
+#event div:last-of-type, #funfact div:last-of-type {
     align-items: center;
 }
 button {
@@ -39,3 +39,5 @@ button {
     font-weight: 600;
     color: var(--black);
 }
+
+

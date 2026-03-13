@@ -8,5 +8,9 @@
 {% endblock %}
 {% block body %}
 {% include "partials/flashes.html.twig" %}
-	{{form(eventForm)}}
+<div class="level_container">
+			<a class="form" href="{{path('home.form.show' , {formName:'create-event'})}}">Créer un cours</a>
+			<a class="form" href="{{path('home.form.show' , {formName:'create-funfact'})}}">Créer une annecdote</a>
+		</div>
+	{# {{form(eventForm)}} #}
 {% endblock %}
