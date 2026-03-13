@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+{% block stylesheet %}
+{{ parent() }}
+<link rel="stylesheet" href="{{asset('style/home/index.css')}}">
+{% endblock %}
+{% block body %}
+{% include "partials/flashes.html.twig" %}
+	{{form(eventForm)}}
+{% endblock %}

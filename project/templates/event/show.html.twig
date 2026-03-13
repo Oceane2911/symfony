@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	Cours
+	{{level}}
+{% endblock %}
+
+{% block stylesheet %}
+{{ parent() }}
+	<link rel="stylesheet" href="{{asset('style/event/show.css')}}">
+
+{% endblock %}
+
+{% block body%}
+	<h1> Cours {{level}}</h1>
+	<div class="gallery">
+		{% for event in events %}
+
+		<div class="card_event">
+			<p class="event_date">Le {{event.date|date("d/m/Y")}} de {{event.start|date('H:i')}} à {{event.finish|date('H:i')}} </p>
+			<h2 class ="event_name">{{event.name}}</h2>
+			<p class="event_teacher">Prof : {{event.teacher}}</p>
+			<p class="event_classroom"> Salle {{event.classroom}}</p>
+
+		</div>
+		{% endfor %}
+	</div>
+{% endblock %}

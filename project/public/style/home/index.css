@@ -1,0 +1,41 @@
+form {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#event {
+    width: 50%;
+    height: auto;
+}
+#event div {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    font-size: large;
+    font-weight: 600;
+}
+input {
+    margin: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2.6rem;
+    border-radius: 1rem;
+    border: 2px solid var(--dark-color);
+}
+#event div:last-of-type {
+    align-items: center;
+}
+button {
+    padding: 1rem;
+    width: 50%;
+    background: var(--dark-color);
+    border-radius: 1rem;
+    border: none;
+    font-size: larger;
+    font-weight: 600;
+    color: var(--black);
+}

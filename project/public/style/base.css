@@ -1,0 +1,35 @@
+:root {
+    --dark-color: #b1b1e4;
+    --light-color: #e0e0ff;
+    --black: #0a0a0b;
+    --white: #fcfcff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+html,
+body {
+    width: 100%;
+    height: auto;
+    background: var(--light-color) !important;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: var(--dark-color);
+    height: 3rem;
+}
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a {
+    font-size: larger;
+    font-weight: 800;
+    color: var(--black);
+}

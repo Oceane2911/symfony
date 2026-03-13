@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Event List
+{% endblock %}
+
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{asset('style/event/index.css')}}">
+{% endblock %}
+
+{% block body %}
+	{# <div class="level_container">
+		<a class="level" href="{{path('event.show' , {level:'B1'})}}">B1</a>
+		<a class="level" href="{{path('event.show' , {level:'B2'})}}">B2</a>
+		<a class="level" href="{{path('event.show' , {level:'B3'})}}">B3</a>
+	</div> #}
+	<div class="cours">
+		<h2>Cours du {{today|date("d/m/Y")}}</h2>
+			
+		<table>
+			
+			<thead>	
+				<tr> 
+					<th>Niveau Classe </th>
+					<th>Horaire</th>
+					<th>Matière</th>
+					<th>Professeur</th>
+					<th>Salle de Cours</th>
+					
+				</tr>
+			</thead>
+		{% for event in events %}
+			{% if (event.date|date("d/m/Y"))==(today|date('d/m/Y'))%}
+			<tbody>
+				{% if event.level==='B1'%}
+				<tr>
+					<td>{{event.level}}</td>
+					<td>{{event.start|date('H:i')}}-{{event.finish|date('H:i')}}</td>
+					<td>{{event.name}}</td>
+					<td>{{event.teacher}}</td>
+					<td>{{event.classroom}}</td>
+				</tr>
+				{% endif %}
+				{% if event.level==='B2' %}
+				
+				<tr>
+					<td>{{event.level}}</td>
+					<td>{{event.start|date('H:i')}}-{{event.finish|date('H:i')}}</td>
+					<td>{{event.name}}</td>
+					<td>{{event.teacher}}</td>
+					<td>{{event.classroom}}</td>
+				</tr>
+				{% endif %}
+				{% if event.level==='B3' %}
+				<tr>
+					<td>{{event.level}}</td>
+					<td>{{event.start|date('H:i')}}-{{event.finish|date('H:i')}}</td>
+					<td>{{event.name}}</td>
+					<td>{{event.teacher}}</td>
+					<td>{{event.classroom}}</td>
+				</tr>
+				{% endif %}
+				</tbody>
+			{% endif %}
+				
+		{% endfor %}
+		</table>
+	</div>
+	<div class="cours">
+		<h2>Cours du {{tomorrow|date("d/m/Y")}}</h2>
+		<table>
+			
+			<thead>	
+				<tr> 
+					<th>Niveau Classe </th>
+					<th>Horaire</th>
+					<th>Matière</th>
+					<th>Professeur</th>
+					<th>Salle de Cours</th>
+					
+				</tr>
+			</thead>
+		{% for event in events %}
+			{% if (event.date|date("d/m/Y"))==(tomorrow|date('d/m/Y'))%}
+				{% if event.level==='B1'%}
+				<tr>
+					<td>{{event.level}}</td>
+					<td>{{event.start|date('H:i')}}-{{event.finish|date('H:i')}}</td>
+					<td>{{event.name}}</td>
+					<td>{{event.teacher}}</td>
+					<td>{{event.classroom}}</td>
+				</tr>
+				{% endif %}
+				{% if event.level==='B2' %}
+				
+				<tr>
+					<td>{{event.level}}</td>
+					<td>{{event.start|date('H:i')}}-{{event.finish|date('H:i')}}</td>
+					<td>{{event.name}}</td>
+					<td>{{event.teacher}}</td>
+					<td>{{event.classroom}}</td>
+				</tr>
+				{% endif %}
+				{% if event.level==='B3' %}
+				<tr>
+					<td>{{event.level}}</td>
+					<td>{{event.start|date('H:i')}}-{{event.finish|date('H:i')}}</td>
+					<td>{{event.name}}</td>
+					<td>{{event.teacher}}</td>
+					<td>{{event.classroom}}</td>
+				</tr>
+				{% endif %}
+			{% endif %}
+				
+		{% endfor %}
+		</table>
+	</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+.level_container {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+}
+.level {
+    color: var(--black);
+}
+.cours {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: 1rem;
+}
+table {
+    margin-top: 1rem;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid var(--dark-color);
+    text-align: center;
+}
+th,
+td {
+    border: 3px solid var(--dark-color);
+}
+.cours table thead {
+    background-color: var(--dark-color);
+}
+td:nth-child(1) {
+    color: var(--black);
+    font-weight: 900;
+}

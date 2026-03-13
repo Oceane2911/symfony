@@ -1,0 +1,21 @@
+.gallery {
+    display: flex;
+}
+.card_event {
+    width: 30%;
+    height: 10rem;
+    background: var(--dark-color);
+    border: solid 2px var(--black);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+.event_date {
+    font-weight: 600;
+}
+.event_name {
+    text-decoration: underline;
+}
